@@ -91,7 +91,7 @@ public class AnOrderForm extends SingleForm {
 			symbolTextBox.setText("");
 			return;}
 		if(productInList.contains(symbol)){
-			infoLabel.setText("Товар уже добавлен");
+			infoLabel.setText("Товар уже есть");
 			symbolTextBox.setText("");
 			return;
 			}

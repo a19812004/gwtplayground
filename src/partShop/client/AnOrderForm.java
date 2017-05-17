@@ -87,7 +87,7 @@ public class AnOrderForm extends SingleForm {
 		
 		//проверка наличия товара в списке
 		if (!productListString.contains(symbol)){
-			infoLabel.setText("Товар долго искали и не нашли");
+			infoLabel.setText("Товар не найден");
 			symbolTextBox.setText("");
 			return;}
 		if(productInList.contains(symbol)){

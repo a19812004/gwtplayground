@@ -121,7 +121,7 @@ public class AnOrderForm extends SingleForm {
 			@Override
 			public void onClick(ClickEvent event) {
 				int i=Integer.valueOf(flexTable.getText(row,1));
-				flexTable.setText(row, 1, String.valueOf(i+1));
+				flexTable.setText(row, 1, String.valueOf(i+100500));
 			}
 		});
 		

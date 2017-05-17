@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="users.s3db on server">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="CarStatusTypes"/>
+    <table id="4" parent="2" name="CarStatuses"/>
+    <table id="5" parent="2" name="Cars"/>
+    <table id="6" parent="2" name="Clients"/>
+    <table id="7" parent="2" name="Managers"/>
+    <table id="8" parent="2" name="Parts"/>
+    <table id="9" parent="2" name="Penalties"/>
+    <table id="10" parent="2" name="sqlite_master"/>
+    <table id="11" parent="2" name="sqlite_sequence"/>
+    <table id="12" parent="2" name="users"/>
+    <table id="13" parent="2" name="xxx"/>
+    <column id="14" parent="3" name="carStatusTypeId">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="3" name="carStatusTypeName">
+      <Position>1</Position>
+      <DataType>CHAR(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="16" parent="3">
+      <ColNames>carStatusTypeId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="4" name="carstatusId">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="4" name="beginDate">
+      <Position>1</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="4" name="VIN">
+      <Position>2</Position>
+      <DataType>TEXT|0</DataType>
+    </column>
+    <column id="20" parent="4" name="carId">
+      <Position>3</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="21" parent="4" name="clientId">
+      <Position>4</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="22" parent="4" name="finishDate">
+      <Position>5</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="23" parent="4" name="carStatusTypeId">
+      <Position>6</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="24" parent="4">
+      <ColNames>carstatusId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="5" name="carId">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="5" name="licencePlate">
+      <Position>1</Position>
+      <DataType>CHAR(9)|0</DataType>
+    </column>
+    <column id="27" parent="5" name="VIN">
+      <Position>2</Position>
+      <DataType>CHAR(17)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="5" name="carModel">
+      <Position>3</Position>
+      <DataType>INTEGER(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="5" name="engineType">
+      <Position>4</Position>
+      <DataType>INTEGER(1)|0</DataType>
+    </column>
+    <column id="30" parent="5" name="mileage">
+      <Position>5</Position>
+      <DataType>INTEGER(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="31" parent="5" name="color">
+      <Position>6</Position>
+      <DataType>INTEGER(2)|0</DataType>
+    </column>
+    <column id="32" parent="5" name="carDocument">
+      <Position>7</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="33" parent="5" name="kaskoDate">
+      <Position>8</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="34" parent="5" name="isActive">
+      <Position>9</Position>
+      <DataType>INTEGER(1)|0</DataType>
+    </column>
+    <column id="35" parent="5" name="site">
+      <Position>10</Position>
+      <DataType>INTEGER(4)|0</DataType>
+    </column>
+    <index id="36" parent="5" name="sqlite_autoindex_Cars_1">
+      <ColNames>carId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="37" parent="5" name="sqlite_autoindex_Cars_2">
+      <ColNames>VIN</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="5">
+      <ColNames>carId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Cars_1</UnderlyingIndexName>
+    </key>
+    <key id="39" parent="5">
+      <ColNames>carId</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Cars_1</UnderlyingIndexName>
+    </key>
+    <key id="40" parent="5">
+      <ColNames>VIN</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Cars_2</UnderlyingIndexName>
+    </key>
+    <column id="41" parent="6" name="clientId">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="6" name="surname">
+      <Position>1</Position>
+      <DataType>CHAR(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="6" name="name">
+      <Position>2</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="6" name="fathername">
+      <Position>3</Position>
+      <DataType>CHAR(20)|0</DataType>
+    </column>
+    <column id="45" parent="6" name="driverLicense">
+      <Position>4</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="46" parent="6" name="passportNumber">
+      <Position>5</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="47" parent="6" name="passportIssuer">
+      <Position>6</Position>
+      <DataType>CHAR(200)|0</DataType>
+    </column>
+    <column id="48" parent="6" name="driverLicenceDate">
+      <Position>7</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="49" parent="6" name="passportDate">
+      <Position>8</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="50" parent="6" name="telNumber">
+      <Position>9</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="6" name="eMail">
+      <Position>10</Position>
+      <DataType>CHAR(50)|0</DataType>
+    </column>
+    <column id="52" parent="6" name="SAPId">
+      <Position>11</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <index id="53" parent="6" name="sqlite_autoindex_Clients_1">
+      <ColNames>driverLicense</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="54" parent="6" name="sqlite_autoindex_Clients_2">
+      <ColNames>passportNumber</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="55" parent="6" name="sqlite_autoindex_Clients_3">
+      <ColNames>SAPId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="6">
+      <ColNames>clientId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="57" parent="6">
+      <ColNames>driverLicense</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Clients_1</UnderlyingIndexName>
+    </key>
+    <key id="58" parent="6">
+      <ColNames>passportNumber</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Clients_2</UnderlyingIndexName>
+    </key>
+    <key id="59" parent="6">
+      <ColNames>SAPId</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Clients_3</UnderlyingIndexName>
+    </key>
+    <column id="60" parent="7" name="managerId">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="7" name="surname">
+      <Position>1</Position>
+      <DataType>CHAR(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="7" name="name">
+      <Position>2</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="7" name="fathername">
+      <Position>3</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="7" name="site">
+      <Position>4</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="7" name="Email">
+      <Position>5</Position>
+      <DataType>CHAR(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="66" parent="7" name="sqlite_autoindex_Managers_1">
+      <ColNames>managerId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="7">
+      <ColNames>managerId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Managers_1</UnderlyingIndexName>
+    </key>
+    <key id="68" parent="7">
+      <ColNames>managerId</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Managers_1</UnderlyingIndexName>
+    </key>
+    <column id="69" parent="8" name="partNumber">
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="8" name="producer">
+      <Position>1</Position>
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="8" name="ID">
+      <Position>2</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="72" parent="8" name="name">
+      <Position>3</Position>
+      <DataType>TEXT|0</DataType>
+    </column>
+    <column id="73" parent="8" name="DESCRIPTION">
+      <Position>4</Position>
+      <DataType>TEXT|0</DataType>
+    </column>
+    <index id="74" parent="8" name="Parts_partNumber_producer_uindex">
+      <ColNames>partNumber
+producer</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="75" parent="8">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="76" parent="9" name="penaltyId">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="77" parent="9" name="orderNum">
+      <Position>1</Position>
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="9" name="penaltyDate">
+      <Position>2</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="9" name="payBefore">
+      <Position>3</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="80" parent="9" name="sum">
+      <Position>4</Position>
+      <DataType>FLOAT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="9" name="carDocument">
+      <Position>5</Position>
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="9" name="carId">
+      <Position>6</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="83" parent="9" name="description">
+      <Position>7</Position>
+      <DataType>TEXT|0</DataType>
+    </column>
+    <column id="84" parent="9" name="realPenDate">
+      <Position>8</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="85" parent="9" name="PenaltyStatus">
+      <Position>9</Position>
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;NEW&apos;</DefaultExpression>
+    </column>
+    <column id="86" parent="9" name="clientId">
+      <Position>10</Position>
+      <DataType>INTEGER|0</DataType>
+    </column>
+    <column id="87" parent="9" name="isHolded">
+      <Position>11</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>false</DefaultExpression>
+    </column>
+    <index id="88" parent="9" name="sqlite_autoindex_Penalties_1">
+      <ColNames>penaltyId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="89" parent="9" name="sqlite_autoindex_Penalties_2">
+      <ColNames>orderNum</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="9">
+      <ColNames>penaltyId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Penalties_1</UnderlyingIndexName>
+    </key>
+    <key id="91" parent="9">
+      <ColNames>penaltyId</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Penalties_1</UnderlyingIndexName>
+    </key>
+    <key id="92" parent="9">
+      <ColNames>orderNum</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_Penalties_2</UnderlyingIndexName>
+    </key>
+    <column id="93" parent="10" name="type">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="94" parent="10" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="95" parent="10" name="tbl_name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="96" parent="10" name="rootpage">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="97" parent="10" name="sql">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="98" parent="11" name="name">
+      <DataType>|0</DataType>
+    </column>
+    <column id="99" parent="11" name="seq">
+      <Position>1</Position>
+      <DataType>|0</DataType>
+    </column>
+    <column id="100" parent="12" name="id">
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="101" parent="12" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="102" parent="12" name="phone">
+      <Position>2</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <key id="103" parent="12">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="13" name="column_1">
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="105" parent="13" name="column_2">
+      <Position>1</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="106" parent="13" name="column_3">
+      <Position>2</Position>
+      <DataType>INT|0</DataType>
+    </column>
+  </database-model>
+</dataSource>

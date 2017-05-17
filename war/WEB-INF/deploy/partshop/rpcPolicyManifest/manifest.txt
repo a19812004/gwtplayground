@@ -1,0 +1,3 @@
+# Module partshop
+# RPC service class, partial path of RPC policy file
+partShop.client.LogAndPassService, 318F16EFF0A43D02DD0EDBB5D845C2EC.gwt.rpc

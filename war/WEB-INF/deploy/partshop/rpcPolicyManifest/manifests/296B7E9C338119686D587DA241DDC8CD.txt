@@ -1,0 +1,2 @@
+serviceClass: partShop.client.LogAndPassService
+path: 318F16EFF0A43D02DD0EDBB5D845C2EC.gwt.rpc
